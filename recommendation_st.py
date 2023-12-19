@@ -1,3 +1,4 @@
+pip install sklearn
 import streamlit as st  
 import pandas as pd  
 from sklearn.feature_extraction.text import CountVectorizer  
@@ -9,7 +10,7 @@ ratings_data = pd.read_csv('Ratings.csv')  # 包含用户评分信息的文件
 users_data = pd.read_csv('Users.csv')   # 包含用户信息的文件  
   
 # 提取特征：从书籍描述中提取特征  
-book_features = books_data['description'].values  # 假设书籍描述存储在'description'列中  
+book_features = books_data['ISBN'].values  # 假设书籍描述存储在'description'列中  
   
 # 创建CountVectorizer对象  
 vectorizer = CountVectorizer()  
